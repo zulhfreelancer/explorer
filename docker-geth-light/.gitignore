@@ -1,0 +1,2 @@
+ethereum/*
+!ethereum/init-and-start-geth.sh

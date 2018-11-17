@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    links:
+      - geth-light
+  
+  geth-light:
+    build:
+      context: ./docker-geth-light
+    volumes:
+      - ./docker-geth-light/ethereum:/home/geth-user
+    entrypoint: ["/bin/bash", "/home/geth-user/init-and-start-geth.sh"]
+    ports:
+      - "8545:8545"
