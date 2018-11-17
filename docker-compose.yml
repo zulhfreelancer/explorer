@@ -7,9 +7,9 @@ services:
     ports:
       - "8000:8000"
     links:
-      - geth-light
+      - geth
   
-  geth-light:
+  geth:
     build:
       context: ./docker-geth
     volumes:

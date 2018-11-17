@@ -49,7 +49,7 @@ Steps:
 2. Put it inside the `docker-geth/ethereum` folder
 3. Create a file named `static-nodes.json` inside `docker-geth/ethereum/geth` folder
 4. Put your private blockchain peer node address inside it. See the correct structure [here](https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#static-nodes).
-5. From the root folder of this project, run `docker-compose up --build`
+5. From the root folder of this project, run `sudo ./docker-compose-start.sh up --build`
 
 The explorer should be up at [http://localhost:8000](http://localhost:8000) with a Geth instance automatically attached to it.
 
