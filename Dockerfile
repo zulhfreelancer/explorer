@@ -8,6 +8,8 @@ WORKDIR /explorer
 COPY . .
 
 RUN npm install -g bower
+# https://github.com/bower/bower/issues/1752#issuecomment-113455403
+RUN echo '{ "allow_root": true }' > /root/.bowerrc
 RUN bower install
 
 EXPOSE 8000
