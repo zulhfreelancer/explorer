@@ -46,8 +46,8 @@ Steps:
 
 0. Clone this project into your dev machine, or into your cloud server where you want to host this explorer.
 1. Get the `genesis.json` file of your private blockchain
-2. Put it inside the `docker-geth-light/ethereum` folder
-3. Create a file named `static-nodes.json` inside `docker-geth-light/ethereum/geth` folder
+2. Put it inside the `docker-geth/ethereum` folder
+3. Create a file named `static-nodes.json` inside `docker-geth/ethereum/geth` folder
 4. Put your private blockchain peer node address inside it. See the correct structure [here](https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#static-nodes).
 5. From the root folder of this project, run `docker-compose up --build`
 

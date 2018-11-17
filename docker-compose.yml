@@ -11,9 +11,9 @@ services:
   
   geth-light:
     build:
-      context: ./docker-geth-light
+      context: ./docker-geth
     volumes:
-      - ./docker-geth-light/ethereum:/home/geth-user
+      - ./docker-geth/ethereum:/home/geth-user
     entrypoint: ["/bin/bash", "/home/geth-user/init-and-start-geth.sh"]
     ports:
       - "8545:8545"
