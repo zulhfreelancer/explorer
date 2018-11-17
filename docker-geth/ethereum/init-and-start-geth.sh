@@ -3,6 +3,10 @@
 # Init
 geth --datadir . --syncmode fast init genesis.json
 
+# CORS - allow explorer on 8000 to talk to Geth on 8545
+localhost_ip=$(curl -s api.ipify.org)
+full_url="http://$localhost_ip:8000"
+
 # Start
 geth \
   --syncmode fast \
@@ -13,4 +17,4 @@ geth \
   --rpc \
   --rpcport 8545 \
   --rpcaddr 0.0.0.0 \
-  --rpccorsdomain "http://localhost:8000"
+  --rpccorsdomain $full_url
