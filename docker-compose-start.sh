@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Remove previous containers
+docker-compose down
+
 # Start fresh
 rm -rf \
     docker-geth/ethereum/geth \
