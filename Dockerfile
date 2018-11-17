@@ -7,5 +7,8 @@ RUN apt-get install -y net-tools
 WORKDIR /explorer
 COPY . .
 
+RUN npm install -g bower
+RUN bower install
+
 EXPOSE 8000
 CMD ["npm","start"]
