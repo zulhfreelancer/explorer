@@ -14,6 +14,8 @@ services:
       context: ./docker-geth
     volumes:
       - ./docker-geth/ethereum:/home/geth-user
+    environment:
+      - "EXTERNAL_IP=${EXTERNAL_IP}"
     entrypoint: ["/bin/bash", "/home/geth-user/init-and-start-geth.sh"]
     ports:
       - "8545:8545"
