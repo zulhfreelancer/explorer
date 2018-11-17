@@ -51,10 +51,10 @@ Steps:
 4. Put your private blockchain peer node address inside it. See the correct structure [here](https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#static-nodes).
 5. From the root folder of this project, run `sudo ./docker-compose-start.sh up --build`
 
-The explorer should be up at [http://localhost:8000](http://localhost:8000) with a Geth instance automatically attached to it.
+The explorer should be up at [http://localhost:8002](http://localhost:8002) with a Geth instance automatically attached to it.
 
 The Geth instance need some time to catch-up (download) all the blocks. Give it time to sync.
 
 **Important**
 
-The Geth instance exposes `8545` JSON RPC port. Even it has `--rpccorsdomain "http://localhost:8000"` argument defined, it's always a good idea to set the correct firewall settings to this `8545` port to prevent DDoS attack to your Geth instance.
+The Geth instance exposes `8545` JSON RPC port. Even it has `--rpccorsdomain "http://localhost:8002"` argument defined, it's always a good idea to set the correct firewall settings to this `8545` port to prevent DDoS attack to your Geth instance.

@@ -3,9 +3,9 @@
 # Init
 geth --datadir . --syncmode fast init genesis.json
 
-# CORS - allow explorer on 8000 to talk to Geth on 8545.
+# CORS - allow explorer on 8002 to talk to Geth on 8545.
 # The `EXTERNAL_IP` here is passed from `docker-compose.yml` file.
-full_url="http://$EXTERNAL_IP:8000"
+full_url="http://$EXTERNAL_IP:8002"
 
 # Start
 geth \
