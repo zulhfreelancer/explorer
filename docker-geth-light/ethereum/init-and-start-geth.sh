@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Init
-geth --datadir . --syncmode light init genesis.json
+geth --datadir . --syncmode fast init genesis.json
 
 # Start
 geth \
-  --syncmode light \
+  --syncmode fast \
   --datadir . \
   --port 30303 \
   --networkid 42 \
