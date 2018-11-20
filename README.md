@@ -44,35 +44,13 @@ File structure:
 
 Steps:
 
-1) Clone this project into your dev machine, or into your cloud server where you want to host this explorer.
+0) Clone this project into your dev machine, or into your cloud server where you want to host this explorer.
 
-2) Get the `genesis.json` file of your private blockchain
+1) Update your network genesis inside `docker-geth/ethereum/genesis.json` file.
 
-3) Put it inside the `docker-geth/ethereum` folder and name it as `genesis.json`
+2) Put your private blockchain peer node address inside the `docker-geth/ethereum/static-nodes.json` file. See the correct structure [here](https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#static-nodes).
 
-4) Create a folder name `geth` inside `docker-geth/ethereum` folder
-
-5) Create a file named `static-nodes.json` inside `docker-geth/ethereum/geth` folder
-
-6) Put your private blockchain peer node address inside it. See the correct structure [here](https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#static-nodes).
-
-Your file structure should be like this:
-
-```
-$ pwd
-/home/ubuntu/block_explorer/docker-geth/ethereum
-
-$ tree .
-.
-├── genesis.json
-├── geth
-│   └── static-nodes.json
-└── init-and-start-geth.sh
-
-1 directory, 3 files
-```
-
-7) From the root folder of this project, run `sudo ./docker-compose-start.sh up --build`
+3) From the root folder of this project, run `sudo ./docker-compose-start.sh up --build`
 
 The explorer should be up at [http://localhost:8002](http://localhost:8002) with a Geth instance automatically attached to it.
 

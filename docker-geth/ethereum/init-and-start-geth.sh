@@ -6,9 +6,11 @@ geth --datadir . --syncmode fast init genesis.json
 # Move `static-nodes.json` file into `geth` folder
 if [ -e static-nodes.json ]
 then
+  echo "**************************************************************"
   echo "File static-nodes.json found, moving it into 'geth' folder now"
   mv static-nodes.json geth
   echo "File moved"
+  echo "**************************************************************"
 fi
 
 # CORS - allow explorer on 8002 to talk to Geth on 8545.
