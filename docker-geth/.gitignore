@@ -1,2 +1,4 @@
 ethereum/*
+!ethereum/genesis.json
+!ethereum/static-nodes.json
 !ethereum/init-and-start-geth.sh
